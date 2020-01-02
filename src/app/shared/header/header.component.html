@@ -1,0 +1,106 @@
+<section class="header">
+  <nav class="navbar navbar-expand-md navbar-light nav-logo">
+    <a [routerLink]="['/']" class="navbar-brand"> PADS </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarsExample04"
+      aria-controls="navbarsExample04"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto"></ul>
+      <form class="form-inline my-2 my-md-0 on-top-right">
+        <span class="dropdown-search">
+          <i
+            class="icon-search"
+            [ngClass]="{'active' : isShow}"
+            data-toggle="collapse"
+            data-target=".collapseSearch"
+            aria-expanded="false"
+            aria-controls="arrow-down s-search"
+            (click)="onShow()"
+          ></i>
+
+          <!-- <i
+            class="icon-chevron-thin-up arrow collapse collapseSearch"
+            id="arrow-down"
+          ></i> -->
+          <i
+            class="icon-chevron-thin-up arrow  collapseSearch"
+            id="arrow-down"
+            [hidden]="!isShow"
+          ></i>
+        </span>
+        <button class="btn btn-border">
+          <span><i class="icon-plus"></i></span>Đăng bài
+        </button>
+        <button class="btn btn-border no-pl">Đăng nhập</button>
+        <button class="btn btn-border no-pl btn-region">
+          <i class="icon-star ico-left"></i>
+          <span class="region-Name">VietNam</span>
+          <i class="icon-caret-down ico-right"></i>
+        </button>
+      </form>
+    </div>
+  </nav>
+  <!-- <div class="section-search collapse collapseSearch" id="s-search"> -->
+  <div class="section-search collapseSearch" id="s-search" [hidden]="!isShow">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-sm-8 col-8">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="keyWord"
+            placeholder="Tôi muốn tìm ..."
+            (keydown)="onKeyEnter($event)"
+          />
+        </div>
+        <div class="col-md-2 col-sm-4 col-4">
+            <a
+              class="btn btn-info btn-search text-center"
+              [routerLink]="['/list-ads']"
+              [queryParams]="{ key: keyWord, regionId: regionId, areaId: areaId }"
+            >
+              Tìm kiếm
+            </a>
+          </div>
+      </div>
+      <div class="row mg-top-15">
+        <div class="col-md-5 col-sm-6 col-6">
+          <select
+            class="form-control"
+            (change)="selectRegion($event)"
+            value="regionId"
+          >
+           <option [value]="null" selected>Chọn Tỉnh, Thành Phố</option>
+            <option *ngFor="let item of regionList" [value]="item.regionId">{{
+              item.regionName
+            }}</option>
+          </select>
+        </div>
+        <div class="col-md-5 col-sm-6 col-6">
+          <select
+            class="form-control"
+            [disabled]="loadingArea"
+            value = "areaId"
+            (change)="selectArea($event)"
+          >
+            <option value="null" selected
+              >Chọn Quận, Huyện, Thị Xã</option
+            >
+            <option *ngFor="let item of areaList" [value]="item.areaId">{{
+              item.areaName
+            }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a [routerLink]="['']">Trang chủ</a>
+    </li>
+    <li class="breadcrumb-item" [ngClass]="{'active': subCateName === ''}">
+        <a *ngIf="subCateName !== ''" [routerLink]="['/list-ads']" [queryParams]="{'cateId': cateId}" (click)="clickedCate(cateId)">{{cateName}}</a>
+      <span *ngIf="subCateName === ''">{{cateName}}</span>
+    </li>
+    <li class="breadcrumb-item active" *ngIf="subCateName !== ''">{{subCateName}}</li>
+  </ol>
+</nav>

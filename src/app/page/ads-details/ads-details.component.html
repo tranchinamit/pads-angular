@@ -1,0 +1,123 @@
+<app-navigation></app-navigation>
+<section class="content">
+  <div class="container content-container">
+    <app-breadcrumb [cateId]="cateId" [cateName]="cateName" [subCateName]="subCateName"></app-breadcrumb>
+    <div class="wrapper-ads-details">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="title" *ngIf="ads && ads.title">
+            {{ads.title}}
+            <div class="rating">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+            </div>
+          </div>
+          <div class="wrapper-ads-content">
+            <div class="row">
+              <div class="col-md-9 col-sm-9">
+                <img class="md-img" *ngIf="!ads"src="../../../assets/images/no-image.png" alt="">
+                <img class="md-img" *ngIf="ads && ads.imagesLink && ads.imagesLink.length>0" [src]="ads.imagesLink[0]" alt="">
+              </div>
+              <div class="col-md-3">
+                <img class="sm-img" *ngIf="ads && ads.imagesLink.length>1" [src]="ads.imagesLink[1]" alt="">
+                <img class="sm-img" *ngIf="ads && ads.imagesLink.length>2" [src]="ads.imagesLink[2]" alt="">
+                <img class="sm-img" *ngIf="ads && ads.imagesLink.length>3" [src]="ads.imagesLink[3]" alt="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-9">
+                <div class="section-content">
+                  <div class="title-content">
+                    Mô tả:
+                  </div>
+                  <span *ngIf="ads && ads.content">{{ads.content}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper-ads-bottom">
+            <div class="row">
+              <div class="wrapper-button">
+                <div class="button">
+                  <button class="btn btn-outline-info">Chia sẻ</button>
+                  <button class="btn btn-outline-info">Mua ngay</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <div class="previous">
+                <i class="icon-caret-left"></i>
+                <span> Tin trước đó </span>
+              </div>
+              <div class="hr"></div>
+              <div class="next">
+                <span> Tin kế tiếp </span>
+                <i class="icon-caret-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="section-info-ads">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="article-owner">
+                  <div class="about">
+                    <div class="title">
+                      Thông tin sản phẩm
+                    </div>
+                    <div *ngIf="ads && ads.condition">
+                      <span class="italic">Tình trạng: </span>
+                      <span class="bold">{{ads.condition}}</span>
+                    </div>
+                    <div *ngIf="ads && ads.priceString">
+                      <span class="italic">Giá: </span>
+                      <span class="bold">{{ads.priceString}}</span>
+                    </div>
+                    <div>
+                      <span class="italic">Đăng lúc: </span>
+                      <span class="bold" *ngIf="ads && ads.createdAtDate">{{ads.createdAtDate}}</span>
+                    </div>
+                  </div>
+                  <div class="seller-info">
+                    <div class="title">
+                      Thông tin người bán
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <img *ngIf="profile && profile.avatar" [src]="profile.avatar" alt="">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div>
+                            <span class="italic">Tên: </span>
+                            <span class="bold" *ngIf="profile && profile.accountName">{{profile.accountName}}</span>
+                        </div>
+                        <div>
+                            <span class="italic">Email: </span>
+                            <span class="bold" *ngIf="profile && profile.email">{{profile.email}}</span>
+                        </div>
+                        <div>
+                            <span class="italic">SĐT: </span>
+                            <span class="bold" *ngIf="profile && profile.phone">{{profile.phone}}</span>
+                        </div>
+                        <a *ngIf="profile && profile.accountId" class="btn btn-outline-info btn-view-profile" [routerLink]="['/profile']" [queryParams]="{'id': profile.accountId}">Xem Hồ Sơ</a>
+                        <button class="btn btn-outline-info btn-mess">Nhắn tin</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

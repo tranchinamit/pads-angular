@@ -1,0 +1,74 @@
+
+.menu-navigation {
+  /* background-image: -webkit-linear-gradient(top,#006484 15%,#1690b7 44%,#eee 68%); */
+  /* background-image: linear-gradient(180deg,#006484 15%,#1690b7 44%,#eee 68%); */
+  height: 50px;
+  background-color: #eee;
+  font-family: "K2D";
+}
+.menu-navigation ul {
+  list-style-type: none;
+  padding-top: 5px;
+  height: 40px;
+  display: block;
+  padding-top: 5px;
+  text-align: center;
+  background-color: #cbcbcb;
+}
+.menu-navigation ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  /* background-image: linear-gradient(90deg,#eee ,#cec6c6 ,#eee); */
+}
+.menu-navigation ul li:not(:first-child) {
+  border-left: solid 1px #5d5d5d;
+}
+.menu-navigation ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+.menu-navigation ul li a:hover {
+  background-color: white;
+  font-style: italic;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.menu-navigation ul li .sub-cate {
+  display: none;
+  background: green;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: left;
+  position: absolute;
+  background-color: #cbcbcb;
+  z-index: 1;
+}
+.menu-navigation ul li .sub-cate .sub-cate-item {
+  display: list-item;
+  color: black;
+  padding-top: 7px;
+}
+.menu-navigation ul li .sub-cate:hover {
+  display: block;
+}
+.menu-navigation ul li a.main-cate:hover ~ .sub-cate {
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .menu-navigation,
+  .menu-navigation ul {
+    height: unset;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-navigation ul li {
+    display: block;
+    background-image: linear-gradient(90deg,#eee ,#cec6c6 ,#eee);
+    border: none !important;
+  }
+}

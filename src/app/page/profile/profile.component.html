@@ -1,0 +1,77 @@
+<app-navigation></app-navigation>
+<section class="content">
+  <div class="page-title text-center"><h1>Thông tin thành viên</h1></div>
+  <div class="container content-container">
+    <div class="img-background">
+      <div class="info-user">
+        <div class="col">
+          <div class="row">
+            <div class="col-md-9 left">
+              <div class="row">
+                  <div class="col-md-4 col-sm-4 wrapper-avatar">
+                    <img
+                      *ngIf="profile && profile.avatar"
+                      [src]="profile.avatar"
+                      alt="avatar"
+                      class="avatar"
+                    />
+                  </div>
+                  <div class="col-md-8 col-sm-8 wrapper-info">
+                    <div class="info" *ngIf="profile">
+                      <h4 *ngIf="profile.accountName">{{ profile.accountName }}</h4>
+                      <div *ngIf="profile.email" class="info-row">
+                        Email: <span class="info-text">{{ profile.email }}</span>
+                      </div>
+                      <div *ngIf="profile.phone" class="info-row">
+                        SĐT: <span class="info-text">{{ profile.phone }}</span>
+                      </div>
+                      <div *ngIf="profile.address" class="info-row">
+                        Địa Chỉ: <span class="info-text">{{ profile.address }}</span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-3 right count">
+              <div class="row">
+                <div class="col-md-12">
+                  <p></p>
+                  <p *ngIf="countPost && countPost > 0" ><strong>{{countPost}}</strong> bài đã được đăng</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sold-items">
+      <h3>Danh sách các bài đăng</h3>
+      <div class="article-items">
+        <i class="icon-chevron-left"></i>
+
+        <div class="list-article" *ngFor="let item of listPost">
+          <a [routerLink]="['/ads-details']" [queryParams]="{'id': item.adId}">
+            <img
+              *ngIf="item.imagesLink && item.imagesLink.length > 0"
+              [src]="item.imagesLink[0]"
+              alt=""
+            />
+          </a>
+          <div class="ads-description">
+
+            <div class="title">
+              <a [routerLink]="['/ads-details']" [queryParams]="{'id': item.adId}">{{ item.title }}
+              </a>
+            </div>
+            <div class="sub-type">{{ item.categoryName }}</div>
+            <div class="createdAt">Ngày đăng: {{ item.createdAtDate }}</div>
+            <div class="money">{{ item.priceString }}</div>
+          </div>
+        </div>
+
+        <i class="icon-chevron-right"></i>
+      </div>
+    </div>
+  </div>
+</section>

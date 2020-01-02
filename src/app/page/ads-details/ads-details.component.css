@@ -1,0 +1,215 @@
+.wrapper-ads-details {
+  border-top: solid 1px black;
+}
+.wrapper-ads-details .title {
+  border-bottom: solid 1px black;
+  padding: 10px;
+  margin-right: -15px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.wrapper-ads-details .title .rating {
+  float: right;
+}
+.wrapper-ads-content {
+  border-bottom: solid 1px black;
+  padding-bottom: 15px;
+}
+.wrapper-ads-content .md-img {
+  width: 100%;
+  height: auto;
+  margin: 15px;
+  border-radius: 4px;
+}
+.wrapper-ads-content .sm-img {
+  width: 100%;
+  height: auto;
+  margin: 25px 10px 10px 10px;
+  border-radius: 2px;
+}
+.wrapper-ads-content .section-content {
+  padding: 10px 5px;
+}
+.wrapper-ads-content .section-content .title-content {
+  font-weight: bold;
+}
+.wrapper-ads-bottom .wrapper-button {
+  position: relative;
+  height: 55px;
+  width: 100%;
+}
+.wrapper-ads-bottom .wrapper-button .button {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+.wrapper-ads-bottom .wrapper-button button {
+  margin: 0 10px;
+}
+.wrapper-ads-bottom .pagination {
+  position: relative;
+  height: 35px;
+}
+.wrapper-ads-bottom .pagination .previous {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.wrapper-ads-bottom .pagination .previous i {
+}
+.wrapper-ads-bottom .pagination .hr {
+  border-bottom: solid 2px black;
+  height: 1px;
+  width: 35%;
+  margin: auto;
+}
+.wrapper-ads-bottom .pagination .next {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+.wrapper-ads-bottom .pagination .next i {
+}
+.wrapper-ads-details .section-info-ads {
+  width: 100%;
+  height: 100%;
+  margin-left: -15px;
+  border-left: solid 1px black;
+}
+.wrapper-ads-details .section-info-ads .article-owner {
+  border: solid 1px black;
+  margin: 15px;
+  border-radius: 4px;
+}
+.wrapper-ads-details .section-info-ads .article-owner .title {
+  font-weight: bold;
+  border: none;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.wrapper-ads-details .section-info-ads .article-owner .about {
+  margin: 10px;
+  margin-top: 30px;
+}
+.wrapper-ads-details .section-info-ads .article-owner .bold{
+  margin: 10px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.wrapper-ads-details .section-info-ads .article-owner .italic{
+  font-style: italic;
+}
+.wrapper-ads-details .section-info-ads .seller-info {
+  margin: 10px;
+  margin-top: 50px;
+}
+.wrapper-ads-details .section-info-ads .seller-info img {
+  height: 180px;
+  width: 180px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 50%;
+}
+.wrapper-ads-details .section-info-ads .seller-info .btn-mess {
+  display: inline-block;
+  margin: 15px auto;
+}
+.wrapper-ads-details .section-info-ads .seller-info .btn-view-profile {
+  display: inline-block;
+  margin: auto 20px;
+  color: #17a2b8;
+}
+.wrapper-ads-details .section-info-ads .seller-info .btn-view-profile:hover {
+  color: white;
+}
+
+
+@media (max-width: 1199px) {
+  .content-container {
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .content-container {
+    max-width: 900px;
+  }
+  .wrapper-ads-details .section-info-ads .seller-info .btn-view-profile,
+  .wrapper-ads-details .section-info-ads .seller-info .btn-mess {
+    display: block;
+    width: 120px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-container {
+    max-width: 700px;
+  }
+  .wrapper-ads-details .section-info-ads {
+    border: none;
+  }
+  .wrapper-ads-details .section-info-ads .seller-info .btn-view-profile,
+  .wrapper-ads-details .section-info-ads .seller-info .btn-mess {
+    display: inline-block;
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper-ads-details {
+    border-top: none;
+    font-size: 15px;
+  }
+  .wrapper-ads-details .title {
+    border-top: solid 1px black;
+  }
+  .wrapper-ads-details .title .rating {
+    float: unset;
+  }
+  .wrapper-ads-content .md-img {
+    width: 315px;
+    margin: 15px auto;
+  }
+  .wrapper-ads-bottom .pagination .hr {
+    width: 10%;
+  }
+  .wrapper-ads-details .section-info-ads {
+    border-left: none;
+    margin-left: 0;
+  }
+  .wrapper-ads-details .section-info-ads .article-owner .title {
+    font-size: 15px;
+  }
+  .wrapper-ads-details .section-info-ads .article-owner .italic,
+  .wrapper-ads-details .section-info-ads .article-owner .bold {
+    font-size: 14px;
+  }
+  .wrapper-ads-details .section-info-ads .article-owner .about {
+    margin-top: 15px;
+  }
+  .wrapper-ads-details .section-info-ads .seller-info {
+    margin-top: 25px;
+  }
+  .wrapper-ads-details .section-info-ads .seller-info img {
+    height: 115px;
+    width: 115px;
+    margin: 2px auto;
+  }
+  .wrapper-ads-content .sm-img {
+    margin: 25px 5px 10px 10px;
+  }
+  .wrapper-ads-details .section-info-ads .seller-info .btn-view-profile {
+    margin: auto 35px;
+  }
+  .wrapper-ads-details .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+  }
+
+}

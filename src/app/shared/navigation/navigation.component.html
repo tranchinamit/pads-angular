@@ -1,0 +1,24 @@
+<div class="menu-navigation">
+  <ul>
+    <li *ngFor="let item of categoryList">
+      <a
+        class="main-cate"
+        [routerLink]="['/list-ads']"
+        [queryParams]="{ cateId: item.categoryId }"
+        (click)="onClickCate(item.categoryId)"
+        >{{ item.categoryName }}</a
+      >
+      <div class="sub-cate">
+        <a
+          class="sub-cate-item"
+          [routerLink]="['/list-ads']"
+          [queryParams]="{ subCateId: i.subCategoryId }"
+          (click)="onClickSubCate(i.subCategoryId)"
+          *ngFor="let i of item.subCategory"
+        >
+          {{ i.subCategoryName }}
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>

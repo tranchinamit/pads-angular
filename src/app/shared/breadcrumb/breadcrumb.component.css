@@ -1,0 +1,13 @@
+.breadcrumb {
+  background-color: #eee;
+  margin-bottom: 0;
+  padding-left: 0;
+  font-family: "K2D";
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .breadcrumb {
+    padding-left: 10px;
+  }
+}

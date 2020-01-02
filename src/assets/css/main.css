@@ -1,0 +1,13 @@
+/* @import "../bootstrap/css/bootstrap.css"; */
+
+/* font */
+@import "../fonts/font.css";
+
+/* icon */
+@import "../icons/style.css";
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #eee;
+}

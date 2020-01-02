@@ -1,0 +1,120 @@
+/* Start Header */
+.header {
+  background-color: #3c3241;
+  box-shadow: 0px 5px 5px -4px #ccc;
+  color: white;
+}
+.header .navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+  color: white !important;
+  padding-left: 30px;
+  font-family: "K2D";
+  text-decoration: none;
+}
+.header .navbar-brand:hover {
+  color: white !important;
+}
+.header .on-top-right .btn-border {
+  padding-left: 35px;
+  border-radius: 30px;
+  background: none;
+  border: solid 1px white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 0 15px;
+  color: white;
+}
+.header .on-top-right .btn-border span {
+  position: relative;
+}
+.header .on-top-right .btn-border span i {
+  padding: 3px;
+  border-radius: 50%;
+  border: solid 1px;
+  font-size: 10px;
+  position: absolute;
+  left: -25px;
+  top: 0;
+}
+.header .on-top-right .btn-border.no-pl {
+  padding-left: 12px;
+}
+.header .on-top-right span.dropdown-search {
+  padding: 0 15px;
+  position: relative;
+}
+.header .on-top-right span.dropdown-search i:first-child {
+  font-size: 30px;
+  opacity: 0.3;
+  color: white;
+}
+.header .on-top-right span.dropdown-search i:first-child:hover,
+.header .on-top-right span.dropdown-search i.icon-search[aria-expanded="true"],
+.header .on-top-right span.dropdown-search i.icon-search.active {
+  opacity: 1;
+  color: white;
+}
+.header .on-top-right span.dropdown-search i.arrow {
+  font-size: 20px;
+  position: absolute;
+  bottom: -24px;
+  left: 18px;
+  color: white;
+}
+.header .on-top-right span.dropdown-search i:hover {
+  cursor: pointer;
+}
+.header .on-top-right .btn-region {
+  padding: 0 !important;
+  width: 130px;
+  position: relative;
+  height: 34px;
+}
+.header .on-top-right .btn-region i.ico-left {
+  border-right: solid 1px white;
+  font-size: 18px;
+  color: red;
+  padding-left: 0px;
+  padding-right: 5px;
+  position: absolute;
+  left: 9px;
+  top: 7px;
+}
+.header .on-top-right .btn-region span {
+  position: absolute;
+  top: 5px;
+  left: 39px;
+}
+.header .on-top-right .btn-region i.ico-right {
+  font-size: 10px;
+  position: absolute;
+  top: 13px;
+  right: 3px;
+}
+.header .section-search {
+  border-top: solid 1px white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+.header .section-search .mg-top-15 {
+  margin-top: 15px;
+}
+.header .section-search input {
+  width: 100%;
+  height: 100%;
+}
+.header .section-search .width-100-percent {
+  width: 100% !important;
+}
+.header .section-search .btn-search {
+  width: 100% !important;
+}
+
+/* Large Desktop */
+@media (min-width: 1367px) {
+  .header nav.nav-logo {
+    max-width: 1260px;
+    margin: auto;
+  } 
+}

@@ -1,0 +1,61 @@
+<section class="content">
+  <div class="container">
+    <section class="categories">
+      <div class="cate-title text-center">
+        <h2>Danh Mục</h2>
+      </div>
+      <div class="article-cate" *ngIf="listCate.length > 0">
+
+        <div class="box" *ngFor="let item of listCate" >
+          <div class="m-icon">
+            <a [routerLink]="['/list-ads']" [queryParams]="{'cateId': item.categoryId}">
+              <img *ngIf="item.imageLink" [src]="item.imageLink"  alt=""/>
+            </a>
+          </div>
+          <div class="description-cate" [title]="item.categoryName">
+            <a [routerLink]="['/list-ads']" [queryParams]="{'cateId': item.categoryId}">
+              {{item.categoryName}}
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="top-posts">
+      <div class="posts-title">
+        <h4>Các bài đăng mới nhất</h4>
+      </div>
+      <div class="article-post">
+
+        <div class="box" *ngFor="let i of listAds">
+          <div class="post-image">
+              <a [routerLink]="['/ads-details']" [queryParams]="{'id': i.adId}">
+                <img *ngIf="i.imagesLink && i.imagesLink.length>0" [src]="i.imagesLink[0]" alt=""/>
+                <img *ngIf="i.imagesLink && i.imagesLink === null" src="../../../assets/images/no-image.png" alt=""/>
+              </a>
+          </div>
+          <div class="title-post">
+              <a [routerLink]="['/ads-details']" [queryParams]="{'id': i.adIid}">
+                {{i.title}}
+              </a>
+          </div>
+        </div>
+
+        <nav aria-label="navigation" *ngIf="listAds && listAds.length > 0">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Trước</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+
+            <li class="page-item">
+              <a class="page-link" href="#">Kế tiếp</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+</section>

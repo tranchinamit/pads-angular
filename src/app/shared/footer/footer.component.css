@@ -1,0 +1,147 @@
+/* Start Footer */
+.footer {
+  background: #3c3241;
+}
+.footer span.website-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer .footer-title {
+  color: #8a8486;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 8px 0 8px 30px;
+  font-family: "K2D";
+}
+.footer .footer-index {
+  padding-left: 30px;
+}
+.footer .footer-index ul {
+  list-style: none;
+  color: #f0ece6;
+  padding: 0;
+}
+.footer .footer-index ul li {
+  padding-bottom: 5px;
+}
+.footer .footer-index ul li a {
+  color: #f0ece6;
+  font-size: 14px;
+}
+.footer .footer-index ul li a img {
+  width: 150px;
+  height: auto;
+  padding: 3px 0;
+}
+.footer .footer-index ul li a:hover {
+  text-decoration: none;
+  color: darkorange;
+}
+.footer hr {
+  background: #635b67;
+  margin: 5px 0;
+}
+.footer .copy-right {
+  color: #f0ece6;
+  height: 45px;
+  padding: 10px 20px 0 10px;
+  font-family: "K2D";
+}
+@media (max-width: 991px) {
+  .footer .copy-right {
+    height: 80px;
+  }
+  .footer .copy-right .item-right {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .footer-title,
+  .footer .footer-index {
+    padding-left: 0
+  }
+  .footer .footer-index ul li a img {
+    width: 100px;
+  }
+  .footer .copy-right {
+    height: 95px;
+  }
+  .footer .copy-right .item-right {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .footer .copy-right {
+    height: 100px;
+  }
+}
+.footer .copy-right .item-left {
+  display: inline-block;
+}
+.footer .copy-right .item-right {
+  margin-top: -5px;
+  float: right;
+}
+.footer .copy-right .item-right i {
+  margin: 0 5px;
+  display: inline-block;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+.footer .copy-right .item-right i:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.footer .copy-right .item-right i.icon-facebook {
+  background: #3a5b95;
+  border-radius: 50%;
+  padding: 7px;
+}
+.footer .copy-right .item-right i.icon-facebook:hover {
+  background: #eee;
+  color: #3a5b95;
+}
+.footer .copy-right .item-right i.icon-twitter {
+  background: #46b2e0;
+  border-radius: 50%;
+  padding: 7px;
+}
+.footer .copy-right .item-right i.icon-twitter:hover {
+  background: #eee;
+  color: #46b2e0;
+}
+.footer .copy-right .item-right i.icon-linkedin2 {
+  background: #0f6cb3;
+  border-radius: 50%;
+  padding: 7px;
+}
+.footer .copy-right .item-right i.icon-linkedin2:hover {
+  background: #eee;
+  color: #0f6cb3;
+}
+.footer .copy-right .item-right i.icon-google-plus {
+  background: #e64050;
+  border-radius: 50%;
+  padding: 7px;
+}
+.footer .copy-right .item-right i.icon-google-plus:hover {
+  background: #eee;
+  color: #e64050;
+}
+.footer .copy-right .item-right i.icon-github {
+  background: #aaaaaa;
+  border-radius: 50%;
+  padding: 7px;
+}
+.footer .copy-right .item-right i.icon-github:hover {
+  background: #eee;
+  color: #aaaaaa;
+}
+.footer .copy-right .item-right i:first-child {
+  margin-left: 15px;
+}
+
+/* End Footer */
